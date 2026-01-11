@@ -1,20 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import HelloWorld  from './components/HelloWorld';
-const name = 'Salazar'
-const imG = 'https://imgs.search.brave.com/XAd0oZZ_s5mkSWC6Fh9F_OAvzz9qmz9WFsYGQSc296s/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/d2hhdC1pcy15b3Vy/LWZhdm9yaXRlLXR5/bGVyLXRoZS1jcmVh/dG9yLWltYWdlLXYw/LXZwN3ExeTl0MjR3/ZTEuanBlZz93aWR0/aD0zMDAmYXV0bz13/ZWJwJnM9ZjZkNDQ1/NjIwYWRmM2RkMGQ1/MWU5MDczMmU5Y2Ni/YjIwYmY2ZWNmNQ'
-const soma = (a, b)=>{
-  return a + b;
-}
+import HelloWorld  from './components/helloworld';
+import SayMyName from './components/SayMyName';
+import Pessoa from './components/Pessoa';
+
+const name = 'Salazar';
 function App() {
   return (
     <div className="App">
-      <h1>Olá React</h1>
-      <h2>Seja bem vindo, {name}!</h2>
-      <p>Somando 4 + 6 : {soma(4,6)}</p>
-      <img src = {imG} width = '150px' height = '150px'/>
-      <p>Negola da boca grande</p>
-      <HelloWorld/>
+      <SayMyName nome = {name}/>
+      <Pessoa nome = {name} idade = '20' foto = 'https://imgs.search.brave.com/_TBNZh23sCQTA1eWAuAgWdYEfX5EgtYpQcnRVfqnvMo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMud2lraWEubm9j/b29raWUubmV0L2Js/YWRlcnVubmVyL2lt/YWdlcy85LzkwL0su/anBnL3JldmlzaW9u/L2xhdGVzdC9zY2Fs/ZS10by13aWR0aC1k/b3duLzI2OD9jYj0y/MDE5MDUxOTA0NTYw/OQ'/>
     </div>
   );
 }
